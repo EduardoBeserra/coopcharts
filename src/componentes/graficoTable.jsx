@@ -2,13 +2,6 @@ import React, { Component } from "react";
 import Chart from "react-google-charts";
 import axios from "axios";
 
-const data = [
-    ["Name", "Salary", "Full time employee"],
-    ["Mike", { v: 10000, f: "$10,000" }, true],
-    ["Jim", { v: 8000, f: "$8,000" }, false],
-    ["Alice", { v: 12500, f: "$12,500" }, true],
-    ["Bob", { v: 7000, f: "$7,000" }, true]
-];
 const options = {
     title: "Company Performance",
     curveType: "function",
@@ -16,7 +9,8 @@ const options = {
     pageSize: 20
 };
 
-const URL = 'http://prg01.datacoper.com.br:40580/IntegradorProgress/rest/ExecGeral?programa=edu3.del&base=BDDesenv.properties'
+const URL = 'http://prg01.datacoper.com.br:40580/IntegradorProgress/rest/ExecGeral'
+   + '?programa=edu3.del&base=BDDesenv.properties'
 
 export default class App extends Component {
 
